@@ -56,6 +56,7 @@ class Dish(models.Model):
 
     class Meta:
         ordering = ["name"]
+        verbose_name_plural = "dishes"
 
     def __str__(self):
         return f"{self.name} | Price: {self.price} | Dish Type: {self.dish_type}"
