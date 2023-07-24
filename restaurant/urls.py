@@ -1,5 +1,8 @@
 from django.urls import path
 
-urlpatterns = [
+from restaurant.views import index
 
+
+urlpatterns = [
+    path("", index, name="index"),
 ]
