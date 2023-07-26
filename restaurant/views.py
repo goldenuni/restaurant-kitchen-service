@@ -6,7 +6,6 @@ from restaurant.models import Dish, Cook, Ingredient, DishType
 
 # Create your views here.
 
-@login_required
 def index(request):
     num_dishes = Dish.objects.count()
     num_cooks = Cook.objects.count()

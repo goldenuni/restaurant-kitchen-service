@@ -1,0 +1,25 @@
+body {
+    /* Set the background image for the whole page */
+    background-image: url("https://images.unsplash.com/photo-1588416820614-f8d6ac6cea56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVzdGF1cmFudCUyMGtpdGNoZW58ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+    background-size: cover;
+    background-position: center;
+    /* Add more styles as needed */
+}
+
+.info-box {
+    /* Customize the style of the info boxes */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    /* Add more styles as needed */
+}
+
+/* Custom styles to center the content and add spacing */
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px; /* Adjust this value for spacing from the navbar */
+}

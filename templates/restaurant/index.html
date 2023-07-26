@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <section class="center-content">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-3">
+          <div class="info-box">
+            <h3>{{ num_dishes }}</h3>
+            <p>Total Dishes</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="info-box">
+            <h3>{{ num_cooks }}</h3>
+            <p>Total Cooks</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="info-box">
+            <h3>{{ num_dishtype }}</h3>
+            <p>Total Dish Types</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="info-box">
+            <h3>{{ num_ingredients }}</h3>
+            <p>Total Ingredients</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
