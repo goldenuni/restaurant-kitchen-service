@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    "crispy_bootstrap4",
     'restaurant',
 ]
 
@@ -129,3 +131,5 @@ AUTH_USER_MODEL = "restaurant.Cook"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
