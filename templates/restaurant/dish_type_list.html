@@ -1,10 +1,30 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-  <h1>Dish Types</h1>
-  <ul>
-    {% for dish_type in dish_type_list %}
-      <li>{{ dish_type.name }}</li>
-    {% endfor %}
-  </ul>
+  <a class="btn btn-success" href="{% url 'restaurant:dish-type-create' %}">Create New Dish Type</a>
+  <h1>Dish Type List</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for dishtype in dish_type_list %}
+        <tr>
+          <td>{{ dishtype.name }}</td>
+          <td>
+            <a class="btn btn-primary btn-sm" href="{% url 'restaurant:dish-type-update' dishtype.pk %}">Update</a>
+            <a class="btn btn-danger btn-sm" href="{% url 'restaurant:dish-type-delete' dishtype.pk %}">Delete</a>
+          </td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="3">No dish types found.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 {% endblock %}

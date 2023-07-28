@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <a class="btn btn-success" href="{% url 'restaurant:ingredient-create' %}">Create New Ingredient</a>
+  <h1>Ingredient List</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for ingredient in object_list %}
+        <tr>
+          <td>{{ ingredient.name }}</td>
+          <td>
+            <a class="btn btn-primary btn-sm" href="{% url 'restaurant:ingredient-update' ingredient.pk %}">Update</a>
+            <a class="btn btn-danger btn-sm" href="{% url 'restaurant:ingredient-delete' ingredient.pk %}">Delete</a>
+          </td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="3">No ingredients found.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
