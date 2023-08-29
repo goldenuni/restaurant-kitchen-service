@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from restaurant.forms import DishSearchForm, DishForm
+from restaurant.forms import DishSearchForm, DishForm, CookCreationForm
 from restaurant.models import Dish, Cook, Ingredient, DishType
 
 
@@ -128,3 +128,17 @@ class DishDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Dish
     fields = "__all__"
     success_url = reverse_lazy("restaurant:dish-list")
+
+
+class CookListView(LoginRequiredMixin, generic.ListView):
+    model = Cook
+    paginate_by = 3
+
+
+class CookDetailView(LoginRequiredMixin, generic.DetailView):
+    model = Cook
+
+
+class CookCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Cook
+    form_class = CookCreationForm

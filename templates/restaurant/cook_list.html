@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <a class="btn btn-success" href="{% url 'restaurant:cook-create' %}">Create New cook</a>
+  <h1>cook List</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for cook in object_list %}
+        <tr>
+          <td><a href="{% url 'restaurant:cook-detail' cook.pk %}">{{ cook.name }}</a></td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="3">No cooks found.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

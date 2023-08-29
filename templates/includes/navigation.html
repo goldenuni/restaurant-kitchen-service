@@ -5,7 +5,7 @@
         <a class="nav-link" href="{% url 'restaurant:index' %}">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Cooks</a>
+        <a class="nav-link" href="{% url 'restaurant:cook-list' %}">Cooks</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'restaurant:dish-list' %}">Dishes</a>
@@ -34,6 +34,5 @@
         </li>
       </ul>
     {% endif %}
-  </div>
   </div>
 </nav>
