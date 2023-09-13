@@ -1,16 +1,23 @@
-{% extends "base.html" %}
+{% extends "base-fullscreen.html" %}
+{% load crispy_forms_filters %}
 
 {% block content %}
-  <a class="btn btn-success" href="{% url 'restaurant:dish-create' %}">Create New Dish</a>
-  <h1>Dish List</h1>
-  <table class="table table-striped">
-    <thead>
+  <div class="m-lg-3">
+    <a class="btn btn-success" href="{% url 'restaurant:dish-create' %}">Create New Dish</a>
+    <h1>Dish List</h1>
+    <form action="" method="GET" class="form-inline">
+      {{ search_form|crispy }}
+      <input class="btn btn-info" type="submit" value="🔍">
+    </form>
+
+    <table class="table table-striped">
+      <thead>
       <tr>
         <th>Name</th>
         <th>Actions</th>
       </tr>
-    </thead>
-    <tbody>
+      </thead>
+      <tbody>
       {% for dish in object_list %}
         <tr>
           <td><a href="{% url 'restaurant:dish-detail' dish.pk %}">{{ dish.name }}</a></td>
@@ -24,6 +31,7 @@
           <td colspan="3">No dishes found.</td>
         </tr>
       {% endfor %}
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  </div>
 {% endblock %}

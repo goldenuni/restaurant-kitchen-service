@@ -1,25 +1,28 @@
-{% extends "base.html" %}
+{% extends "base-fullscreen.html" %}
 
 {% block content %}
-  <a class="btn btn-success" href="{% url 'restaurant:cook-create' %}">Create New cook</a>
-  <h1>cook List</h1>
-  <table class="table table-striped">
-    <thead>
+  <div class="m-lg-3">
+    <a class="btn btn-success" href="{% url 'restaurant:cook-create' %}">Create New Cook</a>
+    <h1>Cook List</h1>
+    <table class="table table-striped">
+      <thead>
       <tr>
         <th>Name</th>
-        <th>Actions</th>
       </tr>
-    </thead>
-    <tbody>
+      </thead>
+      <tbody>
       {% for cook in object_list %}
         <tr>
-          <td><a href="{% url 'restaurant:cook-detail' cook.pk %}">{{ cook.name }}</a></td>
+          <td><a href="{% url 'restaurant:cook-detail' cook.pk %}">{{ cook.username }}</a> |
+            {{ cook.first_name }} {{ cook.last_name }}
+          </td>
         </tr>
       {% empty %}
         <tr>
           <td colspan="3">No cooks found.</td>
         </tr>
       {% endfor %}
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  </div>
 {% endblock %}
