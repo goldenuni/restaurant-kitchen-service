@@ -10,6 +10,13 @@ Environ:
 Create file .env with the same content as .env.sample and fill with your data.
 
 <h2>
+Credentials:
+</h2>
+Login: admin<br>
+Password: QchR1389
+
+
+<h2>
 Installation:
 </h2>
 
