@@ -46,7 +46,6 @@ class PrivateDishTypeTests(TestCase):
         url = reverse("restaurant:dish-type-list")
         response = self.client.get(url)
         dish_types = DishType.objects.all()
-        print(response.context["dish_type_list"])
         self.assertEqual(response.status_code, 200)
         self.assertEqual(
             list(response.context["dish_type_list"]),
@@ -140,7 +139,6 @@ class PrivateIngredientTests(TestCase):
         url = reverse("restaurant:ingredient-list")
         response = self.client.get(url)
         ingredients = Ingredient.objects.all()
-        print(response.context["ingredient_list"])
         self.assertEqual(response.status_code, 200)
         self.assertEqual(
             list(response.context["ingredient_list"]),
@@ -197,8 +195,6 @@ class PrivateCookTests(TestCase):
             "password2": "Testpassword1234"
         })
         self.assertEqual(response.status_code, 302)
-        print(Cook.objects.count())
-        print(Cook.objects.all())
         self.assertEqual(
             Cook.objects.count(),
             8)  # not 7 cause 6 is already in fixture + 165 line (Setup user for tests)
