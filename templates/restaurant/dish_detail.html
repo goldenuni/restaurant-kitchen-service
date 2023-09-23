@@ -1,0 +1,42 @@
+{% extends "base-fullscreen.html" %}
+
+{% block content %}
+  <div class="m-lg-3">
+    <h1>
+      Name: {{ dish.name }}
+      <a style="float:right" href="{% url 'restaurant:dish-update' pk=dish.id %}" class="btn btn-primary">Edit</a>
+    </h1>
+    <p><strong>Price:</strong> {{ dish.price }}
+      <strong>Dish type: </strong>{{ dish.dish_type.name }}
+    </p>
+  </div>
+
+  <div class="card m-lg-3">
+    <h3>Cooks</h3>
+
+    {% for cook in dish.cooks.all %}
+      <hr>
+      <p class="text-muted"><strong>Id:</strong>{{ cook.id }}</p>
+      <p>
+        <strong>Full name: </strong>
+        {{ cook.first_name }} {{ cook.last_name }}
+        {% if cook.years_of_experience %}
+          (experience: {{ cook.years_of_experience }} year{{ cook.years_of_experience|pluralize }})
+        {% endif %}
+      </p>
+    {% empty %}
+      <p>There are no cook.</p>
+    {% endfor %}
+  </div>
+  <br>
+  <div class="card m-lg-3">
+    <h3>Ingredients</h3>
+
+    {% for ingredient in dish.ingredients.all %}
+      <hr>
+      <p class="text-muted"><strong>Id:</strong> {{ ingredient.id }}
+        <strong>Name: </strong>{{ ingredient.name }}
+      </p>
+    {% endfor %}
+  </div>
+{% endblock %}

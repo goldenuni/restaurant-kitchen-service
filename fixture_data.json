@@ -1,0 +1,294 @@
+[
+  {
+    "model": "restaurant.dishtype",
+    "pk": 3,
+    "fields": {
+      "name": "Chinese Cuisine"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 4,
+    "fields": {
+      "name": "Japanese Cuisine"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 5,
+    "fields": {
+      "name": "French Cuisine"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 6,
+    "fields": {
+      "name": "Ukranian Cuisine"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 7,
+    "fields": {
+      "name": "Turkish Cuisine"
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$jbvJmGkuR1X3ralOjndAl3$EnbeekDHtCJovlOAsJ10TYBLRPnHy8V0THcPmkKpxBQ=",
+      "last_login": "2023-09-22T10:55:15.171Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "firstadmin@admins-team.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-09-22T09:09:52.272Z",
+      "years_of_experience": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 2,
+    "fields": {
+      "password": "123456",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "holly",
+      "first_name": "Holly",
+      "last_name": "Smith",
+      "email": "cook1@first-rest.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-09-22T10:55:17Z",
+      "years_of_experience": 10,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 3,
+    "fields": {
+      "password": "123456",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "jackie",
+      "first_name": "Jackie",
+      "last_name": "Black",
+      "email": "cook2@first-rest.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-09-22T10:55:59Z",
+      "years_of_experience": 5,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 4,
+    "fields": {
+      "password": "123456",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "junkie_boy",
+      "first_name": "Johny",
+      "last_name": "Muchai",
+      "email": "cook3@first-rest.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-09-22T10:56:31Z",
+      "years_of_experience": 1,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 5,
+    "fields": {
+      "password": "123456",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "yamano",
+      "first_name": "Yamia",
+      "last_name": "Luncheworth",
+      "email": "cook4@first-rest.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-09-22T10:57:04Z",
+      "years_of_experience": 7,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 6,
+    "fields": {
+      "password": "123456",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "mactranko",
+      "first_name": "Mac",
+      "last_name": "Muskish",
+      "email": "cook5@first-rest.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-09-22T10:57:38Z",
+      "years_of_experience": 4,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.ingredient",
+    "pk": 1,
+    "fields": {
+      "name": "Carrot"
+    }
+  },
+  {
+    "model": "restaurant.ingredient",
+    "pk": 2,
+    "fields": {
+      "name": "Bay leaf"
+    }
+  },
+  {
+    "model": "restaurant.ingredient",
+    "pk": 3,
+    "fields": {
+      "name": "Onion"
+    }
+  },
+  {
+    "model": "restaurant.ingredient",
+    "pk": 4,
+    "fields": {
+      "name": "Dill"
+    }
+  },
+  {
+    "model": "restaurant.ingredient",
+    "pk": 5,
+    "fields": {
+      "name": "Cabbage"
+    }
+  },
+  {
+    "model": "restaurant.ingredient",
+    "pk": 6,
+    "fields": {
+      "name": "Black pepper"
+    }
+  },
+  {
+    "model": "restaurant.ingredient",
+    "pk": 7,
+    "fields": {
+      "name": "Parsley"
+    }
+  },
+  {
+    "model": "restaurant.ingredient",
+    "pk": 8,
+    "fields": {
+      "name": "Beef"
+    }
+  },
+  {
+    "model": "restaurant.ingredient",
+    "pk": 9,
+    "fields": {
+      "name": "Tomato paste"
+    }
+  },
+  {
+    "model": "restaurant.ingredient",
+    "pk": 10,
+    "fields": {
+      "name": "Potato"
+    }
+  },
+  {
+    "model": "restaurant.ingredient",
+    "pk": 11,
+    "fields": {
+      "name": "Salt"
+    }
+  },
+  {
+    "model": "restaurant.ingredient",
+    "pk": 12,
+    "fields": {
+      "name": "Sour cream"
+    }
+  },
+  {
+    "model": "restaurant.ingredient",
+    "pk": 13,
+    "fields": {
+      "name": "spaghetti"
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 1,
+    "fields": {
+      "name": "Borscht",
+      "description": "Borscht is a sour soup, made with meat stock, vegetables and seasonings, common in Eastern Europe and Northern Asia.",
+      "price": "10.00",
+      "dish_type": 6,
+      "ingredients": [
+        2,
+        8,
+        6,
+        5,
+        1,
+        4,
+        3,
+        7,
+        10,
+        11,
+        12,
+        9
+      ],
+      "cooks": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 2,
+    "fields": {
+      "name": "Pasta yamasta",
+      "description": "Pasta yamasta is a cheap version of pasta carbonara",
+      "price": "15.00",
+      "dish_type": 6,
+      "ingredients": [
+        8,
+        6,
+        3,
+        11,
+        12,
+        9,
+        13
+      ],
+      "cooks": [
+        6,
+        5
+      ]
+    }
+  }
+]

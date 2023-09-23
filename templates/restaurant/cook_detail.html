@@ -1,0 +1,24 @@
+{% extends "base-fullscreen.html" %}
+
+{% block content %}
+  <div class="m-lg-3">
+    <h1>
+      Username: {{ cook.username }}
+    </h1>
+    <p><strong>First name:</strong> {{ cook.first_name }}
+      <strong>Last name: </strong>{{ cook.last_name }}
+    </p>
+  </div>
+
+  <div class="card m-lg-3">
+    <h3>Additional info</h3>
+    <p class="text-muted"><strong>Id:</strong>{{ cook.id }}</p>
+    <p>
+      <strong>Full name: </strong>
+      {{ cook.first_name }} {{ cook.last_name }}
+      {% if cook.years_of_experience %}
+        (experience: {{ cook.years_of_experience }} year{{ cook.years_of_experience|pluralize }})
+      {% endif %}
+    </p>
+  </div>
+{% endblock %}

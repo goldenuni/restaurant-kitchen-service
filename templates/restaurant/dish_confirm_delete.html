@@ -1,0 +1,13 @@
+{% extends "base-fullscreen.html" %}
+
+{% block content %}
+  <div class="m-lg-3">
+  <h1>Delete Dish</h1>
+  <p>Are you sure you want to delete "{{ object.name }}"?</p>
+  <form method="post">
+    {% csrf_token %}
+    <button class="btn-danger" type="submit">Yes, delete</button>
+    <a href="{% url 'restaurant:dish-list' %}">No, cancel</a>
+  </form>
+  </div>
+{% endblock %}

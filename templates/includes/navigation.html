@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'restaurant:index' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'restaurant:cook-list' %}">Cooks</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'restaurant:dish-list' %}">Dishes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'restaurant:dish-type-list' %}">Dish Types</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'restaurant:ingredient-list' %}">Ingredients</a>
+      </li>
+    </ul>
+    <!-- Check if the user is authenticated in Django -->
+    {% if user.is_authenticated %}
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Welcome, {{ user.username }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+        </li>
+      </ul>
+    {% else %}
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">Login</a>
+        </li>
+      </ul>
+    {% endif %}
+  </div>
+</nav>
