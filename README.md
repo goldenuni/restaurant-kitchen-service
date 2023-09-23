@@ -3,6 +3,10 @@
 Django project for managing and tracking dishes, cooks, dish types and ingredients in Restaurant
 <hr>
 
+## Check it out
+
+[Restaurant Kitchen Project added on Render](https://restaurant-kitchen-service-2y6l.onrender.com/)
+
 <h2>
 Environ:
 </h2>
