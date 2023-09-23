@@ -14,6 +14,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from django.db.migrations import RunPython
 
+import dj_database_url
 
 load_dotenv(".env")
 
@@ -90,6 +91,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# dj-database-url
+db_from_env = dj_database_url.config(conn_max_age=300)  # database URL
+DATABASES["default"].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
